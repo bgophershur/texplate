@@ -1,0 +1,45 @@
+% Hebrew document using polyglossia
+\documentclass{article}
+
+% Compiler must be XeLaTeX or LuaLaTeX
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage{enumitem}
+\setmainlanguage{hebrew}
+\setotherlanguage{english}
+
+\setlist[itemize]{label=-}
+
+% Use a Hebrew-supporting font
+\newfontfamily\hebrewfont[Script=Hebrew]{David CLM}
+
+% Layout and math
+\usepackage[top=2cm,bottom=2cm,left=2.5cm,right=2cm]{geometry}
+\usepackage{siunitx}
+\sisetup{
+    separate-uncertainty = true,
+    per-mode = symbol
+}
+\usepackage{graphicx}
+\graphicspath{{graphics/}}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{xfp}
+
+\input{variables.tex}
+\input{commands.tex}
+
+\begin{document}
+  \input{sections/titlepage.tex}
+  \tableofcontents
+  \newpage
+  \input{sections/abstract.tex}
+  \input{sections/introduction.tex}
+  \input{sections/theory.tex}
+  \input{sections/method.tex}
+  \input{sections/results.tex}
+  \input{sections/analysis.tex}
+  \input{sections/conclusion.tex}
+  \appendix
+  \input{sections/appendix.tex}
+\end{document}

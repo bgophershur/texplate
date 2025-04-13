@@ -1,0 +1,9 @@
+% Flipping equation numbering parentheses
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+% Hebrew-safe image command
+\newcommand{\hebrewincludegraphics}[2][]{%
+  \begin{LTR}
+    \includegraphics[#1]{#2}%
+  \end{LTR}%
+}
