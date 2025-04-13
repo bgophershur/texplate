@@ -7,7 +7,7 @@ Includes:
 - Modular document structure (`main.tex`, `sections/`, `commands.tex`, etc.)
 - Custom variables for lab/course info
 - Ready-to-print PDF formatting
-- Preconfigured `preamble.tex` for fonts, packages, and style
+- Preconfigured preamble for fonts, packages, and style
 
 ---
 
