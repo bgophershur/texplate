@@ -1,6 +1,10 @@
 % Hebrew document using polyglossia
 \documentclass{article}
 
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+
 % Compiler must be XeLaTeX or LuaLaTeX
 \usepackage{fontspec}
 \usepackage{polyglossia}
@@ -33,13 +37,18 @@
   \input{sections/titlepage.tex}
   \tableofcontents
   \newpage
-  \input{sections/abstract.tex}
-  \input{sections/introduction.tex}
-  \input{sections/theory.tex}
-  \input{sections/method.tex}
-  \input{sections/results.tex}
-  \input{sections/analysis.tex}
-  \input{sections/conclusion.tex}
+  \input{sections/1-intro-and-theory.tex}
+  \newpage
+  \input{sections/2-the-system.tex}
+  \newpage
+  \input{sections/3-analysis.tex}
+  \newpage
+  \input{sections/4-conclusions-and-summary.tex}
+  \newpage
+  \input{sections/5-ideas-to-improve.tex}
+  \newpage
+  \input{sections/6-bibliography.tex}
+  \newpage
   \appendix
   \input{sections/appendix.tex}
 \end{document}
